@@ -1,19 +1,19 @@
-##ecoli2vec
-###Embedding E.coli host to a vector space | sloomba
+## ecoli2vec
+### Embedding E.coli host to a vector space | sloomba
 
 ./dat_ecoli2vec contains 100-dimensional vector space embeddings of key genes (including transcription factors) and promoters of E.coli. The embeddings have been derived by using "strong" RegulonDB ontologies (see ./dat_regulondb) that describe:
 
 1. regulatory relationships
-*<tf> "regulates" <gene>; <gene> "regulated_by" <tf>
-*<tf> "positively_regulates" <gene>; <gene> "positively_regulated_by" <tf>
-*<tf> "negatively_regulates" <gene>; <gene> "negatively_regulated_by" <tf>
+* <tf> "regulates" <gene>; <gene> "regulated_by" <tf>
+* <tf> "positively_regulates" <gene>; <gene> "positively_regulated_by" <tf>
+* <tf> "negatively_regulates" <gene>; <gene> "negatively_regulated_by" <tf>
 2. causal binding & promotor relationships
-*<tf> "binds_to" <promoter>; <promoter> "bound_by" <tf>
-*<promoter> "promotor_of" <gene>; <gene> "promoted_by" <promoter>
+* <tf> "binds_to" <promoter>; <promoter> "bound_by" <tf>
+* <promoter> "promotor_of" <gene>; <gene> "promoted_by" <promoter>
 3. sequence descriptions
-*<tf_seq> "seq_of" <tf>
-*<promoter_seq> "seq_of" <gene>
-*<gene_seq> "seq_of" <gene>
+* <tf_seq> "seq_of" <tf>
+* <promoter_seq> "seq_of" <gene>
+* <gene_seq> "seq_of" <gene>
 
 Accordingly, we derive 3 types of embeddings:
 1. ecoli2vec_grn_100.tsv: embed only regulatory relationships
